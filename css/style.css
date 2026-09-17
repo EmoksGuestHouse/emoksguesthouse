@@ -1,0 +1,450 @@
+:root {
+  --ink: #1A2E2E;
+  --ink-soft: #3D4A4A;
+  --muted: #7A8888;
+  --muted-2: #9AA6A6;
+  --line: #E7E1D3;
+  --paper: #F4F0E6;
+  --card: #FFFFFF;
+  --panel: #FBFAF6;
+  --panel-head: #EFEAD9;
+  --teal: #0E6E6E;
+  --teal-dark: #0A5252;
+  --coral: #C96A3C;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 3px rgba(26, 46, 46, 0.08), 0 8px 24px rgba(26, 46, 46, 0.06);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--paper);
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  color: var(--ink);
+  margin: 0;
+}
+
+a { color: var(--teal); text-decoration: none; }
+a:hover { color: var(--teal-dark); }
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(244, 240, 230, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 19px;
+  color: var(--ink);
+}
+
+.logo span { color: var(--teal); }
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main-nav a:hover { color: var(--teal); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  margin: 4px 0;
+}
+
+/* Hero */
+.hero {
+  padding: 64px 0 56px;
+}
+
+.hero .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 680px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 17px;
+  color: var(--ink-soft);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.btn-primary { background: var(--teal); color: #fff; }
+.btn-primary:hover { background: var(--teal-dark); color: #fff; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+/* Section headings */
+section { padding: 48px 0; }
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 28px;
+}
+
+.section-head h2 { font-size: 30px; font-weight: 700; }
+.section-head p { font-size: 15px; color: var(--muted); max-width: 640px; }
+
+/* Activities */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.activity-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activity-card .price {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.activity-card h3 { font-size: 18px; }
+.activity-card p { font-size: 14px; color: var(--muted); margin: 0; }
+
+/* Rooms */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.room-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.room-photo {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.room-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--teal);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.room-body {
+  padding: 22px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-grow: 1;
+}
+
+.room-title { display: flex; flex-direction: column; gap: 2px; }
+.room-title h3 { font-size: 20px; font-weight: 700; }
+.room-title .subtitle { font-size: 13px; color: var(--muted); }
+
+.room-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.room-price .amount {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.room-price .unit { font-size: 13px; color: var(--muted); }
+
+.room-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.room-features li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.room-features svg { flex-shrink: 0; }
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 4px 0;
+}
+
+.availability {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.availability-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.availability-head .label {
+  font-weight: 600;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+}
+
+.availability-head .note { color: var(--muted); font-size: 12px; }
+
+.calendar-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.calendar-panel-head {
+  padding: 10px 14px;
+  background: var(--panel-head);
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-panel-head a { font-weight: 600; }
+
+.calendar-embed {
+  width: 100%;
+  height: 220px;
+  border: 0;
+  display: block;
+}
+
+.calendar-placeholder {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(45deg, var(--panel), var(--panel) 10px, var(--paper) 10px, var(--paper) 20px);
+}
+
+.calendar-placeholder span {
+  font-size: 12px;
+  color: var(--muted-2);
+  text-align: center;
+  padding: 0 16px;
+}
+
+/* Gallery strip within room card */
+.room-gallery {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.room-gallery img {
+  width: 72px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.review-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-card p { font-size: 14px; color: var(--ink-soft); margin: 0; }
+
+.review-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* Contact / footer */
+.contact {
+  background: var(--ink);
+  color: #E7EEEE;
+}
+
+.contact .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 48px 24px;
+}
+
+.contact h2 { color: #fff; font-size: 26px; }
+.contact p, .contact a { color: #C7D3D3; }
+.contact a:hover { color: #fff; }
+
+.site-footer {
+  background: var(--ink);
+  color: #7A8F8F;
+  font-size: 13px;
+  text-align: center;
+  padding: 18px 24px;
+  border-top: 1px solid #2A3E3E;
+}
+
+@media (max-width: 860px) {
+  .rooms-grid { grid-template-columns: 1fr; }
+  .main-nav { display: none; }
+  .nav-toggle { display: block; }
+  .site-header.nav-open .main-nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-header.nav-open .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 16px;
+  }
+  .site-header.nav-open .main-nav li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .hero h1 { font-size: 30px; }
+}
