@@ -190,6 +190,7 @@ section { padding: 48px 0; }
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow: hidden;
 }
 
 .activity-card .price {
