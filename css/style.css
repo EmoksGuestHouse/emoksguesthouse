@@ -295,7 +295,8 @@ section { padding: 48px 0; }
 }
 
 .availability {
-  display: flex;
+  /* Hidden for now until per-room Google Calendars are all connected. Remove this rule to bring it back. */
+  display: none;
   flex-direction: column;
   gap: 8px;
 }
